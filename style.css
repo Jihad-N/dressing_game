@@ -151,3 +151,64 @@ body {
     width: 30px;
     height: 30px;
 }
+
+
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column; 
+    width: 95%;            
+    height: auto;          
+    margin: 10px auto;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .Avatar-section {
+    border-right: none;    
+    border-bottom: 4px solid var(--border-color); 
+    padding-right: 0;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+
+  .Avatar-layers {
+    width: 250px;          
+    height: 250px;
+  }
+
+  .controls-panel {
+    width: 100%;
+  }
+
+  .tab-content {
+    height: 250px;         
+  }
+
+  .tab {
+    padding: 12px;
+    font-size: 22px;
+    flex: 1;              
+    display: flex;
+    justify-content: center;
+  }
+
+  .display-grid {
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 8px;
+  }
+
+  .item-option {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .display-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .app-container {
+    border-width: 4px; 
+  }
+}
