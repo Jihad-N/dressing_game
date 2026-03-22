@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets\game-icon.png" type="image/png">
+    <title>Dressing Game</title>
+  </head>
+  <body>
+    <div class="app-container">
+        <div class="task-bar">
+            <img src="assets\delete-button-removebg-preview.png" alt="remove">
+            <img src="assets\remove-button-removebg-preview.png" alt="minimize">
+        </div>
+      <!-- Left Side: Character Preview -->
+      <section class="Avatar-section">
+        <div class="Avatar-layers">
+          <!-- Character layers (Hair, Eyes, Body) would go here -->
+          <img
+            src="assets\Avatar-image1.png"
+            alt="Pixel Character"
+            width="300"
+            id="avatar-body"
+            class="avatar-body"
+          />
+          <img
+            src="assets\top-1.png"
+            alt="Top"
+            width="300"
+            id="avatar-top"
+            class="avatar-layer"
+          />
+          <img
+            src="assets\hair-1.png"
+            alt="Eyes"
+            width="300"
+            id="avatar-eyes"
+            class="avatar-layer"
+          />
+          <img
+            src="assets\eye-1.png"
+            alt="Hair"
+            width="300"
+            id="avatar-hair"
+            class="avatar-layer"
+          />
+        </div>
+        <div class="action-buttons">
+          <button class="save-btn" >💾</button>
+        </div>
+      </section>
+
+      <!-- Right Side: Customization Tools -->
+      <div class="controls-panel">
+        <nav class="tab-buttons">
+          <button class="tab active" data-tab="Color" aria-label="Color">
+            <img src="assets\palette.png" width="20" alt="Palette">
+          </button>
+          <button class="tab" data-tab="Hair" aria-label="Hair"><img src="assets\hair-brush.png" width="20" alt="Hair"></button>
+          <button class="tab" data-tab="Tops" aria-label="Tops">👕</button>
+          <button class="tab" data-tab="Eyes" aria-label="Eyes"><img src="assets\cartoon-eyes.png"width="20" alt="Eyes"></button>
+        </nav>
+
+        <div class="tab-content" id="tab-content">
+          <div class="tab-panel active-panel" data-panel="Color">
+            <h3>BACKGROUND</h3>
+            <div class="color-grid">
+              <div class="swatch" style="background: #ffffff"></div>
+              <div class="swatch" style="background: #ffd1d1"></div>
+              <div class="swatch" style="background: #b0e0e6"></div>
+              <div class="swatch" style="background: #c8fec8"></div>
+              <div class="swatch" style="background: #f2c6fc"></div>
+              <div class="swatch" style="background: #fffecf"></div>
+              <div class="swatch" style="background: #ffbbdd"></div>
+              <div class="swatch" style="background: transparent"></div>
+            </div>
+
+            <h3>SKIN COLOR</h3>
+            <div class="color-grid">
+              <div
+                class="swatch"
+                style="background: #ffe3d8"
+                onclick="changeSkin('assets/Avatar-image1.png')"
+              ></div>
+              <div
+                class="swatch"
+                style="background: #ebb387"
+                onclick="changeSkin('assets/Avatar-skin-tan.png')"
+              ></div>
+              <div
+                class="swatch"
+                style="background: #89552d"
+                onclick="changeSkin('assets/Avatar-skin-dark.png')"
+              ></div>
+            </div>
+          </div>
+          <div class="tab-panel" data-panel="Hair">
+            <div class="display-grid">
+              <img
+                id="avatar-hair"
+                src="assets\hair-1.png"
+                onclick="changePart('avatar-hair', 'assets/hair-1.png')"
+                class="item-option"
+              />
+              <img
+                id="avatar-hair"
+                src="assets\hair-2.png"
+                onclick="changePart('avatar-hair', 'assets/hair-2.png')"
+                class="item-option"
+              />
+              <img
+                id="avatar-hair"
+                src="assets\hair-3.png"
+                onclick="changePart('avatar-hair', 'assets/hair-3.png')"
+                class="item-option"
+              />
+              <img
+                id="avatar-hair"
+                src="assets\hair-4.png"
+                onclick="changePart('avatar-hair', 'assets/hair-4.png')"
+                class="item-option"
+              />
+              <img
+                id="avatar-hair"
+                src="assets\hair-5.png"
+                onclick="changePart('avatar-hair', 'assets/hair-5.png')"
+                class="item-option"
+              />
+              <img
+                id="avatar-hair"
+                src="assets\hair-6.png"
+                onclick="changePart('avatar-hair', 'assets/hair-6.png')"
+                class="item-option"
+              />
+            </div>
+          </div>
+
+          <div class="tab-panel" data-panel="Tops">
+            <div class="display-grid">
+              <img
+                id="avatar-top"
+                src="assets\top-1.png"
+                onclick="changePart('avatar-top', 'assets/top-1.png')"
+                class="item-option"
+              />
+              <img
+                id="avatar-top"
+                src="assets\top-2.png"
+                onclick="changePart('avatar-top', 'assets/top-2.png')"
+                class="item-option"
+              />
+              <img
+                id="avatar-top"
+                src="assets\top-3.png"
+                onclick="changePart('avatar-top', 'assets/top-3.png')"
+                class="item-option"
+              />
+              <img
+                id="avatar-top"
+                src="assets\top-4.png"
+                onclick="changePart('avatar-top', 'assets/top-4.png')"
+                class="item-option"
+              />
+              <img
+                id="avatar-top"
+                src="assets\top-5.png"
+                onclick="changePart('avatar-top', 'assets/top-5.png')"
+                class="item-option"
+              />
+            </div>
+          </div>
+
+          <div class="tab-panel" data-panel="Eyes">
+            <div class="display-grid">
+              <img
+                id="avatar-eye"
+                src="assets\eye-1.png"
+                onclick="changePart('avatar-eyes', 'assets/eye-1.png')"
+                class="item-option"
+              />
+              <img
+                id="avatar-eye"
+                src="assets\eye-2.png"
+                onclick="changePart('avatar-eyes', 'assets/eye-2.png')"
+                class="item-option"
+              />
+              <img
+                id="avatar-eye"
+                src="assets\eye-3.png"
+                onclick="changePart('avatar-eyes', 'assets/eye-3.png')"
+                class="item-option"
+              />
+              <img
+                id="avatar-eye"
+                src="assets\eye-4.png"
+                onclick="changePart('avatar-eyes', 'assets/eye-4.png')"
+                class="item-option"
+              />
+              <img
+                id="avatar-eye"
+                src="assets\eye-5.png"
+                onclick="changePart('avatar-eyes', 'assets/eye-5.png')"
+                class="item-option"
+              />
+              <img
+                id="avatar-eye"
+                src="assets\eye-6.png"
+                onclick="changePart('avatar-eyes', 'assets/eye-6.png')"
+                class="item-option"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <div><p> &copy; Jihad @2026 all copyright reserved</p></div>
+  </body>
+</html>

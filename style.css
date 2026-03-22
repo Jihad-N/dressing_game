@@ -1,0 +1,153 @@
+:root {
+  --ui-bg: #F9E79F; /* The pale yellow background */
+  --border-color: #4A4A4A;
+  --panel-bg: #FFFFFF;
+  
+}
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;     
+  min-height: 100vh;       
+}
+
+.app-container {
+  display: flex;
+  gap: 20px;
+  width: 1000px; 
+  height: 500px; 
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: var(--ui-bg);
+  border: 6px solid var(--border-color);
+  font-family: 'Courier New', Courier, monospace; /* Retro feel */
+  margin: auto;
+}
+
+/* Character Preview Section */
+.Avatar-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 4px solid var(--border-color);
+  padding-right: 20px;
+}
+
+.Avatar-layers{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-color: white; 
+  border: 4px solid var(--border-color);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end; 
+}
+.avatar-layer 
+,.avatar-body{
+  position: absolute;
+  bottom: -42%; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: bottom;
+  object-fit: contain;
+  image-rendering: pixelated;
+  display: block;
+  transform: translateX(-50%) scale(1.5);
+  transform-origin: bottom center;
+}
+.avatar-body { z-index: 1; }  
+#avatar-eyes { z-index: 2; } 
+#avatar-top  { z-index: 3; } 
+#avatar-hair { z-index: 4; }
+.avatar-layer{
+    display:none;
+}
+/* Control Panel Section */
+.controls-panel {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 5px;
+  z-index: 2;
+  margin-bottom: -2px;
+}
+
+.tab {
+  background: #eee; 
+  border: 3px solid var(--border-color);
+  border-bottom: 3px solid var(--border-color);
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 8px 8px 0 0; 
+  transition: all 0.2s;
+}
+.tab.active {
+  background: white; 
+  border-bottom: 3px solid white; 
+  padding-bottom: 12px; 
+  position: relative;
+  margin-bottom: -1px;
+}
+.tab-content{
+    background-color: white;
+    padding: 20px;
+    border: 3px solid var(--border-color);
+    z-index: 1;
+    flex: 1;
+    overflow-y: auto; 
+  width: 400px; 
+}
+.tab-content::-webkit-scrollbar {
+  width: 10px;
+}
+.tab-content::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+}
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active-panel {
+    display: block;
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.swatch {
+  width: 30px;
+  height: 30px;
+  border: 3px solid var(--border-color);
+  cursor: pointer;
+}
+
+.swatch:hover {
+  transform: scale(1.1);
+}
+.display-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.save-btn{
+    margin: 10px;
+}
+.task-bar img{
+    width: 30px;
+    height: 30px;
+}
