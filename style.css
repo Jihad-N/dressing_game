@@ -200,13 +200,14 @@ body {
   }
 
   .display-grid {
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 8px;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 5px;
   }
 
   .item-option {
     width: 70px;
     height: 70px;
+    scale: 2;
   }
 }
 
