@@ -156,10 +156,11 @@ body {
 @media (max-width: 768px) {
   .app-container {
     flex-direction: column; 
-    width: 95%;            
+    width: auto;            
     height: auto;          
     margin: 10px auto;
-    padding: 10px;
+    padding: 30px;
+    padding-left: 20px;
     gap: 15px;
   }
 
@@ -178,10 +179,16 @@ body {
 
   .controls-panel {
     width: 100%;
+    
+  }
+
+  .tab-buttons{
+    width: 85%;
   }
 
   .tab-content {
-    height: 250px;         
+    height: 250px;
+            width: 88%; 
   }
 
   .tab {
