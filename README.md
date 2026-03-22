@@ -3,7 +3,7 @@
 A fun and interactive dress-up game built using HTML, CSS, and JavaScript.
 Players can mix and match different clothing items to style a character and create unique outfits.
 
-🔗 Live Demo: ![Play the Game](https://jihad-n.github.io/dressing_game/)
+🔗 Live Demo: [Play the Game](https://jihad-n.github.io/dressing_game/)
 
 🎮 Features
 🧥 Multiple clothing options (tops, bottoms, accessories, etc.)
